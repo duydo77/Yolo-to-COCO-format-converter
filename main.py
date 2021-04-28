@@ -9,13 +9,9 @@ import numpy as np
 # Don't change the list name 'Classes'          #
 #################################################
 
-# Class에 맞게 바꿔줘야함
 classes = [
-"chair",
-"handle",
-"table",
-"button",
-"person",
+"smoke",
+"fire",
 ]
 
 # Get 'images' and 'annotations' info
@@ -43,7 +39,10 @@ def images_annotations_info(opt):
 
         # read a label file
         label_path = line[:-3]+"txt"
-        label_file = open(label_path,"r")
+        try:
+            label_file = open(label_path,"r")
+        except:
+            continue
         label_read_line = label_file.readlines()
         label_file.close()
 

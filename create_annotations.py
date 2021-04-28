@@ -1,5 +1,5 @@
 def create_image_annotation(file_name, width, height, image_id):
-    file_name = file_name.split('/')[-1] # ~~~.jpg가 file_name이 되도록 문자열 split
+    file_name = file_name.split('/')[-1]
     images = {
         'file_name': file_name,
         'height': height,
